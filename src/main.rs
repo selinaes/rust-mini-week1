@@ -2,7 +2,11 @@
 use clap::Parser;
 
 #[derive(Parser)]
-#[clap(version = "1.0", author = "Selina Liu", about = "A CLI tool that converts an integer to a Roman numeral")]
+#[clap(
+    version = "1.0",
+    author = "Selina Liu",
+    about = "A CLI tool that converts an integer to a Roman numeral"
+)]
 struct Cli {
     #[clap(subcommand)]
     command: Option<Commands>,
@@ -11,7 +15,7 @@ struct Cli {
 #[derive(Parser)]
 enum Commands {
     #[clap(version = "1.0", author = "Selina Liu")]
-    Play {
+    Convert {
         #[clap(short, long)]
         num: u8,
     },
@@ -20,7 +24,7 @@ enum Commands {
 fn main() {
     let args = Cli::parse();
     match args.command {
-        Some(Commands::Play { num }) => {
+        Some(Commands::Convert { num }) => {
             let result = mini1::convert(&num);
             println!("{}", result);
         }
