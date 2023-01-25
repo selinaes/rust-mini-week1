@@ -1,12 +1,12 @@
 /* A integer to Roman conversion. */
 
-/* Accepts an integer (u8).
+/* Accepts an integer (u32).
 Converts the integer to Roman literal and outputs it.
 */
 
 // a function that takes in an integer and retur
 
-pub fn convert(num: &u8) -> String {
+pub fn convert(num: &u32) -> String {
     let thousands: Vec<&str> = vec!["", "M", "MM", "MMM"];
     let hundreds: Vec<&str> = vec!["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"];
     let tens: Vec<&str> = vec!["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"];

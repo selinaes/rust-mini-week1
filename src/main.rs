@@ -17,7 +17,7 @@ enum Commands {
     #[clap(version = "1.0", author = "Selina Liu")]
     Convert {
         #[clap(short, long)]
-        num: u8,
+        num: u32,
     },
 }
 
